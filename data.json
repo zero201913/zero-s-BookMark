@@ -9,7 +9,6 @@
             { "name": "SQL数据生成器", "url": "https://datum.codedefault.com/" },
             { "name": "正则学习网站", "url": "https://regexr-cn.com/" },
             { "name": "vue后台管理系统模板", "url": "http://vue.easydo.work/" },
-            { "name": "蓝桥云课", "url": "https://www.lanqiao.cn/" },
             { "name": "CodeAdventure", "url": "https://www.codedex.io/" },
             { "name": "书栈网", "url": "https://www.bookstack.cn/" },
             { "name": "手搓项目教程", "url": "https://www.quanxiaoha.com/column/" },
@@ -23,13 +22,24 @@
             { "name": "网页设计练习网站", "url": "https://icodethis.com/modes/design-to-code" },
             { "name": "博客设计参考网站", "url": "https://arthurw728.github.io/myblog/index.html#skills" },
             { "name": "网页网格生成器", "url": "https://cssgrid-generator.netlify.app/?ref=producthunt" },
-            { "name": "配色表", "url": "http://www.peiseka.cn/" }
+            { "name": "配色表", "url": "http://www.peiseka.cn/" },
+            { "name": "在线代码编辑器", "url": "https://playcode.io/" }
+        ],
+        "前后端参考文档":[
+            {"name": "Vue.js", "url": "https://vuejs.org/"},
+            {"name": "Vue Router", "url": "https://router.vuejs.org/zh/installation.html"},
+            {"name": "Element Plus", "url": "https://element-plus.org/zh-CN/component/button"},
+            {"name": "Ant Design", "url": "https://ant.design/components/button-cn/"},
+            {"name": "Bootstrap", "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"},
+            {"name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/button"},
+            {"name": "Windi CSS", "url": "https://cn.windicss.org/utilities/general/typography.html"}
         ],
 		"学习与知识": [
             { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
             { "name": "嘎嘎学嘎嘎地学", "url": "https://gaga.plus/" },
-            { "name": "算法导肮，交互式学习平台", "url": "https://algo.codefather.cn/#algorithm-categories" },
+            { "name": "算法导肮，交互式学习平台", "url": "https://algo.codefather.cn/" },
             { "name": "SQL闯关平台", "url": "https://sqlmother.yupi.icu/#/learn" },
+            { "name": "面试鸭题库", "url": "https://www.mianshiya.com/" },
             { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
             { "name": "英语杂志阅读平台", "url": "https://englishnewsinlevels.com/" },
             { "name": "西瓜新概念英语", "url": "https://learnenai.com/" },

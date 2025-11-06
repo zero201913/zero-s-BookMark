@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="zh-CN"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>书签导航</title>
+    <title>Zero02's BookMark</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><i class="fas fa-bookmark"></i> 我的书签导航</h1>
+            <h1><i class="fas fa-bookmark"></i>Zero02's BookMark</h1>
             <div class="search-box">
                 <input type="text" id="search" placeholder="搜索书签...">
                 <button id="search-btn"><i class="fas fa-search"></i></button>
@@ -25,6 +25,9 @@
             </button>
             <button class="filter-btn" data-category="设计与前端" style="background-color: #ff6b6b; color: white;">
                 设计与前端
+            </button>
+            <button class="filter-btn" data-category="前后端参考文档" style="background-color: #6bff9e; color: white;">
+                前后端参考文档
             </button>
             <button class="filter-btn" data-category="学习与知识" style="background-color: #b36bff; color: white;">
                 学习与知识
@@ -114,12 +117,6 @@
                     </a>
                 </div>
             
-                <div class="bookmark-card" style="--category-color: #4a6bff;" data-name="蓝桥云课" data-url="https://www.lanqiao.cn/" data-category="开发与编程">
-                    <a href="https://www.lanqiao.cn/" target="_blank" rel="noopener">
-                        蓝桥云课
-                    </a>
-                </div>
-            
                 <div class="bookmark-card" style="--category-color: #4a6bff;" data-name="codeadventure" data-url="https://www.codedex.io/" data-category="开发与编程">
                     <a href="https://www.codedex.io/" target="_blank" rel="noopener">
                         CodeAdventure
@@ -197,6 +194,60 @@
                         配色表
                     </a>
                 </div>
+            
+                <div class="bookmark-card" style="--category-color: #ff6b6b;" data-name="在线代码编辑器" data-url="https://playcode.io/" data-category="设计与前端">
+                    <a href="https://playcode.io/" target="_blank" rel="noopener">
+                        在线代码编辑器
+                    </a>
+                </div>
+            </div></div>
+            <div class="category-section" data-category="前后端参考文档">
+                <h2 class="category-title" style="color: #6bff9e; border-bottom-color: #6bff9e;">
+                    前后端参考文档
+                </h2>
+                <div class="bookmark-grid">
+        
+                <div class="bookmark-card" style="--category-color: #6bff9e;" data-name="vue.js" data-url="https://vuejs.org/" data-category="前后端参考文档">
+                    <a href="https://vuejs.org/" target="_blank" rel="noopener">
+                        Vue.js
+                    </a>
+                </div>
+            
+                <div class="bookmark-card" style="--category-color: #6bff9e;" data-name="vue router" data-url="https://router.vuejs.org/zh/installation.html" data-category="前后端参考文档">
+                    <a href="https://router.vuejs.org/zh/installation.html" target="_blank" rel="noopener">
+                        Vue Router
+                    </a>
+                </div>
+            
+                <div class="bookmark-card" style="--category-color: #6bff9e;" data-name="element plus" data-url="https://element-plus.org/zh-cn/component/button" data-category="前后端参考文档">
+                    <a href="https://element-plus.org/zh-CN/component/button" target="_blank" rel="noopener">
+                        Element Plus
+                    </a>
+                </div>
+            
+                <div class="bookmark-card" style="--category-color: #6bff9e;" data-name="ant design" data-url="https://ant.design/components/button-cn/" data-category="前后端参考文档">
+                    <a href="https://ant.design/components/button-cn/" target="_blank" rel="noopener">
+                        Ant Design
+                    </a>
+                </div>
+            
+                <div class="bookmark-card" style="--category-color: #6bff9e;" data-name="bootstrap" data-url="https://getbootstrap.com/docs/5.3/getting-started/introduction/" data-category="前后端参考文档">
+                    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noopener">
+                        Bootstrap
+                    </a>
+                </div>
+            
+                <div class="bookmark-card" style="--category-color: #6bff9e;" data-name="tailwind css" data-url="https://tailwindcss.com/docs/button" data-category="前后端参考文档">
+                    <a href="https://tailwindcss.com/docs/button" target="_blank" rel="noopener">
+                        Tailwind CSS
+                    </a>
+                </div>
+            
+                <div class="bookmark-card" style="--category-color: #6bff9e;" data-name="windi css" data-url="https://cn.windicss.org/utilities/general/typography.html" data-category="前后端参考文档">
+                    <a href="https://cn.windicss.org/utilities/general/typography.html" target="_blank" rel="noopener">
+                        Windi CSS
+                    </a>
+                </div>
             </div></div>
             <div class="category-section" data-category="学习与知识">
                 <h2 class="category-title" style="color: #b36bff; border-bottom-color: #b36bff;">
@@ -216,8 +267,8 @@
                     </a>
                 </div>
             
-                <div class="bookmark-card" style="--category-color: #b36bff;" data-name="算法导肮，交互式学习平台" data-url="https://algo.codefather.cn/#algorithm-categories" data-category="学习与知识">
-                    <a href="https://algo.codefather.cn/#algorithm-categories" target="_blank" rel="noopener">
+                <div class="bookmark-card" style="--category-color: #b36bff;" data-name="算法导肮，交互式学习平台" data-url="https://algo.codefather.cn/" data-category="学习与知识">
+                    <a href="https://algo.codefather.cn/" target="_blank" rel="noopener">
                         算法导肮，交互式学习平台
                     </a>
                 </div>
@@ -225,6 +276,12 @@
                 <div class="bookmark-card" style="--category-color: #b36bff;" data-name="sql闯关平台" data-url="https://sqlmother.yupi.icu/#/learn" data-category="学习与知识">
                     <a href="https://sqlmother.yupi.icu/#/learn" target="_blank" rel="noopener">
                         SQL闯关平台
+                    </a>
+                </div>
+            
+                <div class="bookmark-card" style="--category-color: #b36bff;" data-name="面试鸭题库" data-url="https://www.mianshiya.com/" data-category="学习与知识">
+                    <a href="https://www.mianshiya.com/" target="_blank" rel="noopener">
+                        面试鸭题库
                     </a>
                 </div>
             
