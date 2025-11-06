@@ -1,0 +1,239 @@
+/* 全局样式 */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #ff6b6b;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 头部样式 */
+header {
+    background: linear-gradient(135deg, var(--primary-color), #7a43ff);
+    color: white;
+    padding: 20px 0;
+    box-shadow: var(--box-shadow);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header h1 i {
+    margin-right: 10px;
+}
+
+.search-box {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    width: 250px;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.search-box button:hover {
+    transform: scale(1.05);
+}
+
+/* 分类过滤器样式 */
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.filter-btn {
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    color: #495057;
+}
+
+.filter-btn:hover {
+    background-color: #dee2e6;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 书签容器样式 */
+.bookmarks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.category-section {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.bookmark-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.bookmark-card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.bookmark-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bookmark-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--category-color, var(--primary-color));
+}
+
+.bookmark-card a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    font-weight: 500;
+}
+
+.bookmark-card a:hover {
+    color: var(--category-color, var(--primary-color));
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .bookmarks-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bookmark-card {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* 分类颜色 */
+.category-开发与编程 { --category-color: #4a6bff; }
+.category-设计与前端 { --category-color: #ff6b6b; }
+.category-AI与绘画 { --category-color: #6bff9e; }
+.category-文件与数据工具 { --category-color: #ffb36b; }
+.category-学习与知识 { --category-color: #b36bff; }
+.category-字体与文字 { --category-color: #ff6bb3; }
+.category-资源与素材 { --category-color: #6bffff; }
+.category-打字与输入 { --category-color: #ffff6b; }
+.category-工具与服务 { --category-color: #ff6b6b; }
+.category-导航与整合页 { --category-color: #6b6bff; }
+.category-二次元与ACG { --category-color: #ff9e6b; }
+.category-社交与视频平台 { --category-color: #6bff6b; }
+.category-成人内容 { --category-color: #ff6b9e; }
+.category-个人娱乐 { --category-color: #6bffb3; }

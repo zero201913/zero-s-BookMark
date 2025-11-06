@@ -1,0 +1,11 @@
+{
+    "name": "bookmark-nav",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "node build.js",
+        "preview": "npx serve dist"
+    },
+    "devDependencies": {
+        "cheerio": "^1.1.2"
+    }
+}

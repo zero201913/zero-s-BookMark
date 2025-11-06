@@ -1,0 +1,117 @@
+
+{
+    "bookmarks": {
+        "开发与编程": [
+            { "name": "Apifox", "url": "https://app.apifox.com/main" },
+            { "name": "代码样式展示生成平台", "url": "https://ray.so/" },
+            { "name": "开发者搜索", "url": "https://kaifa.baidu.com/" },
+            { "name": "编程助手", "url": "https://codegen.bqrdh.com/" },
+            { "name": "SQL数据生成器", "url": "https://datum.codedefault.com/" },
+            { "name": "正则学习网站", "url": "https://regexr-cn.com/" },
+            { "name": "vue后台管理系统模板", "url": "http://vue.easydo.work/" },
+            { "name": "蓝桥云课", "url": "https://www.lanqiao.cn/" },
+            { "name": "CodeAdventure", "url": "https://www.codedex.io/" },
+            { "name": "书栈网", "url": "https://www.bookstack.cn/" },
+            { "name": "手搓项目教程", "url": "https://www.quanxiaoha.com/column/" },
+            { "name": "代码小抄", "url": "https://www.codecopy.cn/user/my" },
+            { "name": "力扣", "url": "https://leetcode.cn/" },
+            { "name": "Linux命令大全", "url": "https://www.linuxcool.com/" }
+        ],
+        "设计与前端": [
+            { "name": "快捷键备忘录", "url": "https://hotkeycheatsheet.com/zh" },
+            { "name": "图标网站", "url": "https://ionic.io/ionicons" },
+            { "name": "网页设计练习网站", "url": "https://icodethis.com/modes/design-to-code" },
+            { "name": "博客设计参考网站", "url": "https://arthurw728.github.io/myblog/index.html#skills" },
+            { "name": "网页网格生成器", "url": "https://cssgrid-generator.netlify.app/?ref=producthunt" },
+            { "name": "配色表", "url": "http://www.peiseka.cn/" }
+        ],
+		"学习与知识": [
+            { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
+            { "name": "嘎嘎学嘎嘎地学", "url": "https://gaga.plus/" },
+            { "name": "算法导肮，交互式学习平台", "url": "https://algo.codefather.cn/#algorithm-categories" },
+            { "name": "SQL闯关平台", "url": "https://sqlmother.yupi.icu/#/learn" },
+            { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
+            { "name": "英语杂志阅读平台", "url": "https://englishnewsinlevels.com/" },
+            { "name": "西瓜新概念英语", "url": "https://learnenai.com/" },
+            { "name": "md思维导图工具", "url": "https://markmap.js.org/repl" },
+            { "name": "英语小说阅读网站", "url": "https://www.yingyuxiaoshuo.com/" },
+            { "name": "乡村郎中配药", "url": "https://www.xjlz365.com/" }
+        ],
+        "AI与绘画": [
+            { "name": "Ai绘画网站", "url": "https://aiimagebg.com/zh" },
+            { "name": "AI图片无损放大", "url": "https://prompt.qpipi.com/" },
+            { "name": "sd提示词生成器", "url": "https://prompt.qpipi.com/" },
+            { "name": "绘画tag生成器", "url": "https://aitag.top/" },
+            { "name": "AI绘画模型库", "url": "https://aitag.top/" },
+            { "name": "AI智能体提示词", "url": "https://www.aishort.top/" },
+            { "name": "AI动漫脚步图片生成", "url": "https://www.animefeet.online/zh" }
+        ],
+        "文件与数据工具": [
+            { "name": "局域网传输平台", "url": "https://pairdrop.net/" },
+            { "name": "局域网传输利器", "url": "https://pairdrop.net/" },
+            { "name": "在线文件传输", "url": "https://www.wenshushu.cn/" },
+            { "name": "在线计时器", "url": "https://cn.easycattimer.com/" },
+            { "name": "云数据库平台", "url": "https://sqlpub.com/" },
+            { "name": "压缩图片", "url": "https://freecompress.com/zh-cn/compress-image" },
+            { "name": "高速cdn图床", "url": "https://img.hmvod.cc/" },
+            { "name": "云朵图床", "url": "https://pngcdn.cn/" },
+            { "name": "个人资源云盘", "url": "https://pan.uvooc.com/" },
+            { "name": "网络剪贴板", "url": "https://netcut.cn/" }
+        ],
+        "字体与文字": [
+            { "name": "字体生成器", "url": "https://www.fontgenerator.dev/zh" },
+            { "name": "字体下载网站", "url": "https://www.100font.com/" },
+            { "name": "CDN字体网站", "url": "https://fonts.zeoseven.com/" },
+            { "name": "风格化字体生成", "url": "https://vaufonts.com/" }
+        ],
+        "资源与素材": [
+            { "name": "z-library镜像站", "url": "https://getzlib.com/zh" },
+            { "name": "图片素材网站", "url": "https://pngimg.com/" },
+            { "name": "透明图片素材", "url": "https://www.stickpng.com/" },
+            { "name": "管理星级项目", "url": "https://www.githubseek.xyz/zh" },
+            { "name": "cdn加速js引擎", "url": "https://cdnjs.com/" },
+            { "name": "魔方简历", "url": "https://magicv.art/zh" }
+        ],
+        "打字与输入": [
+            { "name": "狂野打字机", "url": "https://xianrenak.itch.io/wildwriter" },
+            { "name": "在线同步打字机", "url": "https://writer.bighugelabs.com/welcome" },
+            { "name": "打字网站", "url": "https://monkeytype.com/" },
+            { "name": "英语单词练习工具", "url": "https://qwertylearner.ai/" }
+        ],
+        "工具与服务": [
+            { "name": "虚拟手机号服务", "url": "https://sms-activate.page/" },
+            { "name": "域名注册平台", "url": "https://www.gname.com/" },
+            { "name": "美国地址生成器", "url": "https://codegen.bqrdh.com/" },
+            { "name": "2925无限邮箱", "url": "https://www.2925.com/login/" },
+            { "name": "短视频解析工具", "url": "https://www.v2ob.com/" },
+            { "name": "装机教程网站", "url": "https://zhuangit.ababtools.com/" },
+            { "name": "激活windows，office", "url": "https://kms.cx/" }
+        ],
+        "导航与整合页": [
+            { "name": "网址导航", "url": "https://www.ak47s.cn/" },
+            { "name": "破解工具合集", "url": "https://www.quanxiaoha.com/dev-tools/" }
+        ],
+        "二次元与ACG": [
+            { "name": "二次元美图", "url": "https://manyacg.top/" },
+            { "name": "哲风壁纸", "url": "https://haowallpaper.com/" },
+            { "name": "p站图搜图", "url": "https://saucenao.com/index.php" },
+            { "name": "♥幻发布页", "url": "https://xhacg.cc/" },
+            { "name": "saber抱枕", "url": "https://saber.love/" },
+            { "name": "mmd网站", "url": "https://www.iwara.tv/" }
+        ],
+        "社交与视频平台": [
+            { "name": "X平台", "url": "https://x.com/home" },
+            { "name": "TelegramWeb", "url": "https://web.telegram.org/a/" },
+            { "name": "电报值得看", "url": "https://dbzdk.com/" },
+            { "name": "instagram视频下载器", "url": "https://insdownloader.org/zh" }
+        ],
+        "成人内容（需自律）": [
+            { "name": "Rule34", "url": "https://rule34video.com/" },
+            { "name": "YourPorn", "url": "https://www.youporn.com/" },
+            { "name": "里番剧平台", "url": "https://hanime1.me/" }
+        ],
+        "个人娱乐": [
+            { "name": "个人小游戏平台", "url": "https://g8hh.github.io/#/" }
+        ]
+    }
+}
