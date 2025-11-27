@@ -1,72 +1,72 @@
-# 书签导航网页
+# 书签导航生成器 (Bookmark Nav Generator)
 
-一个基于 HTML/CSS/JavaScript 的本地书签导航项目，可读取 `data.json` 中的分类与链接，呈现搜索、分类过滤和丰富配色的书签卡片。
+这是一个轻量级的静态书签网站生成工具。它通过读取 JSON 配置文件，自动生成包含分类筛选和搜索功能的静态 HTML 网站。
 
-## 功能特色
+## 📂 项目结构
 
-- **动态数据加载**：从 `data.json` 读取书签分类及链接
-- **分类过滤**：顶部按钮一键筛选对应分类
-- **关键词搜索**：输入关键词即时过滤名称或 URL
-- **颜色主题**：不同分类关联不同配色，卡片悬停动效
-- **零依赖**：纯原生 Web 技术，无需额外框架
+- **`data.json`**: 核心数据文件。所有的书签链接都维护在这里。
+- **`build.js`**: 构建脚本。负责读取数据并将 HTML 生成到 `dist` 目录。
+- **`index.html`**: 页面模板。
+- **`render.js`**: 前端交互逻辑（搜索、分类切换）。
+- **`styles.css`**: 页面样式。
+- **`dist/`**: **最终生成结果**。部署时只需要这个文件夹的内容。
 
-## 目录结构
+## 🛠️ 环境准备
 
+确保你的电脑已安装 [Node.js](https://nodejs.org/)。
+
+首次使用，请安装依赖：
+
+```bash
+npm install
 ```
-data.json              书签数据（JSON 格式）
-index.html             网页入口文件
-script.js              逻辑：加载数据、搜索与过滤
-styles.css             样式：布局与主题色
-启动书签导航.bat      Windows 批处理，一键启动本地服务
-```
 
-## 快速开始
+## 📝 如何更新书签
 
-### 方法一：双击批处理
-
-1. 确保已安装 Python（3.x）。
-2. 直接双击 `启动书签导航.bat`。
-3. 默认浏览器将自动打开 `http://localhost:8000`，即可使用。
-
-### 方法二：手动启动
-
-```powershell
-cd d:\Web\BookMark
-python -m http.server 8000
-```
-然后在浏览器访问 `http://localhost:8000`。
-
-> 如需更换端口，可在命令末尾替换 `8000` 为其他可用端口，并同步修改 `启动书签导航.bat` 中的端口号。
-
-## 数据文件说明 (`data.json`)
+1. 打开项目根目录下的 `data.json` 文件。
+2. 在 `bookmarks` 对象中找到对应的分类，或者添加新分类。
+3. 按照以下格式添加书签：
 
 ```json
-{
-  "bookmarks": {
-    "分类名称": [
-      { "name": "站点名称", "url": "https://example.com" },
-      ...
-    ],
-    ...
-  }
-}
+"分类名称": [
+    { "name": "网站名称", "url": "https://example.com" },
+    { "name": "另一个网站", "url": "https://test.com" }
+]
 ```
-- `bookmarks` 对象的每个键为 **分类名称**。
-- 每个分类对应一个书签数组，数组元素包含：
-  - `name`：书签展示名称
-  - `url`：跳转链接
 
-修改或新增书签后，刷新页面即可看到更新内容。
+> **注意**：请严格遵守 JSON 语法（双引号、逗号不能多也不能少）。
 
-## 自定义
+## 🚀 生成网站 (Build)
 
-- **新增分类颜色**：在 `script.js` 的 `categoryColors` 对象中添加键值对；同时可在 `styles.css` 中扩展 CSS 变量实现更灵活的配色方案。
-- **布局与样式**：编辑 `styles.css` 调整卡片大小、字体或动画。
+当你修改完 `data.json` 或 `index.html` 模板后，执行以下命令生成静态文件：
 
-## 浏览器兼容性
+```bash
+npm run build
+```
 
-项目使用 ES6+ 语法与 CSS Flexbox/Grid 布局，兼容现代主流浏览器（Chrome、Edge、Firefox、Safari 等）。
+执行成功后，终端会提示输出到 `dist/` 目录。
 
-## License
+## 👁️ 本地预览
 
-MIT
+生成后，你可以启动一个本地服务器来查看效果：
+
+```bash
+npm run preview
+```
+
+或者直接在浏览器中打开 `dist/index.html` 文件（某些功能在 file:// 协议下可能受限，推荐使用 preview）。
+
+## ☁️ 部署 (Deploy)
+
+由于生成的是纯静态文件，你可以将其部署到任何 Web 服务器或静态托管平台（如 GitHub Pages, Vercel, Netlify, Nginx 等）。
+
+**部署步骤：**
+1. 运行 `npm run build` 确保 `dist/` 目录是最新的。
+2. 将 `dist/` 目录下的**所有文件**（`index.html`, `styles.css`, `render.js`）上传到你的服务器根目录。
+
+### 常见问题
+- **Q: 修改了 content 没有变化？**
+  A: 请确认你是否运行了 `npm run build`，并且浏览器是否缓存了旧页面（可尝试 Ctrl+F5 强制刷新）。
+- **Q: 报错 "data.json 不存在"？**
+  A: 请确保你在项目根目录下运行命令。
+

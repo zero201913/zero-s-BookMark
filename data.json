@@ -45,10 +45,12 @@
             { "name": "西瓜新概念英语", "url": "https://learnenai.com/" },
             { "name": "md思维导图工具", "url": "https://markmap.js.org/repl" },
             { "name": "英语小说阅读网站", "url": "https://www.yingyuxiaoshuo.com/" },
-            { "name": "乡村郎中配药", "url": "https://www.xjlz365.com/" }
+            { "name": "乡村郎中配药", "url": "https://www.xjlz365.com/" },
+            { "name": "闯关式git教程", "url": "https://learngitbranching.js.org/" }
         ],
         "AI与绘画": [
             { "name": "Ai绘画网站", "url": "https://aiimagebg.com/zh" },
+            { "name": "鱼皮Ai导航", "url": "https://ai.codefather.cn/" },
             { "name": "AI图片无损放大", "url": "https://prompt.qpipi.com/" },
             { "name": "sd提示词生成器", "url": "https://prompt.qpipi.com/" },
             { "name": "绘画tag生成器", "url": "https://aitag.top/" },
@@ -72,7 +74,8 @@
             { "name": "字体生成器", "url": "https://www.fontgenerator.dev/zh" },
             { "name": "字体下载网站", "url": "https://www.100font.com/" },
             { "name": "CDN字体网站", "url": "https://fonts.zeoseven.com/" },
-            { "name": "风格化字体生成", "url": "https://vaufonts.com/" }
+            { "name": "风格化字体生成", "url": "https://vaufonts.com/" },
+            { "name": "凹凸工坊", "url": "https://www.autohanding.com/" }
         ],
         "资源与素材": [
             { "name": "z-library镜像站", "url": "https://getzlib.com/zh" },
@@ -103,6 +106,7 @@
         ],
         "二次元与ACG": [
             { "name": "二次元美图", "url": "https://manyacg.top/" },
+            { "name": "萌里壁纸", "url": "https://www.moely.link/" },
             { "name": "哲风壁纸", "url": "https://haowallpaper.com/" },
             { "name": "p站图搜图", "url": "https://saucenao.com/index.php" },
             { "name": "♥幻发布页", "url": "https://xhacg.cc/" },
