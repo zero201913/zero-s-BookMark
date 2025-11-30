@@ -1,4 +1,3 @@
-
 {
     "bookmarks": {
         "开发与编程": [
@@ -125,7 +124,12 @@
             { "name": "里番剧平台", "url": "https://hanime1.me/" }
         ],
         "个人娱乐": [
-            { "name": "个人小游戏平台", "url": "https://g8hh.github.io/#/" }
+            { "name": "个人小游戏平台", "url": "https://g8hh.github.io/#/" },
+            { "name": "碧蓝航线角色图鉴", "url": "https://wiki.biligame.com/blhx/%E8%88%B0%E8%88%B9%E5%9B%BE%E9%89%B4" },
+            { "name": "星穹轨道角色图鉴", "url": "https://wiki.biligame.com/sr/%E8%A7%92%E8%89%B2%E5%9B%BE%E9%89%B4" },
+            { "name": "原神角色图鉴", "url": "https://wiki.biligame.com/ys/%E8%A7%92%E8%89%B2" },
+            { "name": "鸣潮角色图鉴", "url": "https://mc.appfeng.com/avatar" },
+            { "name": "绝区零角色图鉴", "url": "https://wiki.biligame.com/zzz/%E8%A7%92%E8%89%B2%E5%9B%BE%E9%89%B4" }
         ]
     }
 }
