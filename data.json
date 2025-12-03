@@ -45,7 +45,8 @@
             { "name": "md思维导图工具", "url": "https://markmap.js.org/repl" },
             { "name": "英语小说阅读网站", "url": "https://www.yingyuxiaoshuo.com/" },
             { "name": "乡村郎中配药", "url": "https://www.xjlz365.com/" },
-            { "name": "闯关式git教程", "url": "https://learngitbranching.js.org/" }
+            { "name": "闯关式git教程", "url": "https://learngitbranching.js.org/" },
+            { "name": "英语实时新闻阅读", "url": "https://breakingnewsenglish.com/" }
         ],
         "AI与绘画": [
             { "name": "Ai绘画网站", "url": "https://aiimagebg.com/zh" },
@@ -83,6 +84,14 @@
             { "name": "管理星级项目", "url": "https://www.githubseek.xyz/zh" },
             { "name": "cdn加速js引擎", "url": "https://cdnjs.com/" },
             { "name": "魔方简历", "url": "https://magicv.art/zh" }
+        ],
+		"复习与笔记": [
+            { "name": "Mysql复习笔记", "url": "https://jimhackking.github.io/%E8%BF%90%E7%BB%B4/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" },
+            { "name": "算法复习笔记", "url": "https://labuladong.online/algo/" },
+            { "name": "JUC并发编程，尚硅谷", "url": "https://www.cnblogs.com/qipaoxian/p/16860243.html" },
+            { "name": "零基础Java韩顺平", "url": "https://www.cnblogs.com/xiqin-huang/p/17897078.html#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%A6%82%E8%BF%B0" },
+            { "name": "git上手和实战", "url": "https://www.it235.com/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/Git/git.html#git%E5%AE%89%E8%A3%85" },
+            { "name": "牛客练习和测试", "url": "https://www.nowcoder.com/exam/intelligent?questionJobId=10&subTabName=intelligent_page&tagId=273590" }
         ],
         "打字与输入": [
             { "name": "狂野打字机", "url": "https://xianrenak.itch.io/wildwriter" },
