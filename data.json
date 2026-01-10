@@ -23,15 +23,16 @@
             { "name": "网页网格生成器", "url": "https://cssgrid-generator.netlify.app/?ref=producthunt" },
             { "name": "配色表", "url": "http://www.peiseka.cn/" },
             { "name": "在线代码编辑器", "url": "https://playcode.io/" }
+            { "name": "Figma设计网站", "url": "https://www.figma.com/" }
+            { "name": "Uiverse通用组件", "url": "https://uiverse.io/" }
+            { "name": "react设计后台", "url": "https://react-admin.cn/admin/" }
         ],
         "前后端参考文档":[
             {"name": "Vue.js", "url": "https://vuejs.org/"},
             {"name": "Vue Router", "url": "https://router.vuejs.org/zh/installation.html"},
-            {"name": "Element Plus", "url": "https://element-plus.org/zh-CN/component/button"},
             {"name": "Ant Design", "url": "https://ant.design/components/button-cn/"},
             {"name": "Bootstrap", "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"},
-            {"name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/button"},
-            {"name": "Windi CSS", "url": "https://cn.windicss.org/utilities/general/typography.html"}
+            {"name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/installation/using-vite"},
         ],
 		"学习与知识": [
             { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
@@ -50,6 +51,7 @@
         ],
         "AI与绘画": [
             { "name": "Ai绘画网站", "url": "https://aiimagebg.com/zh" },
+            { "name": "Ai绘画工程图", "url": "https://next-ai-drawio.jiang.jp/" },
             { "name": "鱼皮Ai导航", "url": "https://ai.codefather.cn/" },
             { "name": "AI图片无损放大", "url": "https://prompt.qpipi.com/" },
             { "name": "sd提示词生成器", "url": "https://prompt.qpipi.com/" },
@@ -59,9 +61,8 @@
             { "name": "AI动漫脚步图片生成", "url": "https://www.animefeet.online/zh" }
         ],
         "文件与数据工具": [
-            { "name": "局域网传输平台", "url": "https://pairdrop.net/" },
+            { "name": "文叔叔传输平台", "url": "https://www.wenshushu.cn/" },
             { "name": "局域网传输利器", "url": "https://pairdrop.net/" },
-            { "name": "在线文件传输", "url": "https://www.wenshushu.cn/" },
             { "name": "在线计时器", "url": "https://cn.easycattimer.com/" },
             { "name": "云数据库平台", "url": "https://sqlpub.com/" },
             { "name": "压缩图片", "url": "https://freecompress.com/zh-cn/compress-image" },
@@ -69,6 +70,7 @@
             { "name": "云朵图床", "url": "https://pngcdn.cn/" },
             { "name": "个人资源云盘", "url": "https://pan.uvooc.com/" },
             { "name": "网络剪贴板", "url": "https://netcut.cn/" }
+            { "name": "网络剪贴板2", "url": "https://clipboard.im/" }
         ],
         "字体与文字": [
             { "name": "字体生成器", "url": "https://www.fontgenerator.dev/zh" },
