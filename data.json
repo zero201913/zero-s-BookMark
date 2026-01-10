@@ -27,17 +27,17 @@
             { "name": "Uiverse通用组件", "url": "https://uiverse.io/" },
             { "name": "react设计后台", "url": "https://react-admin.cn/admin/" }
         ],
-        "前后端参考文档":[
-            {"name": "Vue.js", "url": "https://vuejs.org/"},
-            {"name": "Vue Router", "url": "https://router.vuejs.org/zh/installation.html"},
-            {"name": "Ant Design", "url": "https://ant.design/components/button-cn/"},
-            {"name": "Bootstrap", "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"},
-            {"name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/installation/using-vite"}
+        "前后端参考文档": [
+            { "name": "Vue.js", "url": "https://vuejs.org/" },
+            { "name": "Vue Router", "url": "https://router.vuejs.org/zh/installation.html" },
+            { "name": "Ant Design", "url": "https://ant.design/components/button-cn/" },
+            { "name": "Bootstrap", "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/" },
+            { "name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/installation/using-vite" }
         ],
-		"学习与知识": [
+        "学习与知识": [
             { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
             { "name": "嘎嘎学嘎嘎地学", "url": "https://gaga.plus/" },
-            { "name": "算法导肮，交互式学习平台", "url": "https://algo.codefather.cn/" },
+            { "name": "算法导航，交互式学习平台", "url": "https://algo.codefather.cn/" },
             { "name": "SQL闯关平台", "url": "https://sqlmother.yupi.icu/#/learn" },
             { "name": "面试鸭题库", "url": "https://www.mianshiya.com/" },
             { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
@@ -69,7 +69,7 @@
             { "name": "高速cdn图床", "url": "https://img.hmvod.cc/" },
             { "name": "云朵图床", "url": "https://pngcdn.cn/" },
             { "name": "个人资源云盘", "url": "https://pan.uvooc.com/" },
-            { "name": "网络剪贴板", "url": "https://netcut.cn/" }
+            { "name": "网络剪贴板", "url": "https://netcut.cn/" },
             { "name": "网络剪贴板2", "url": "https://clipboard.im/" }
         ],
         "字体与文字": [
@@ -87,7 +87,7 @@
             { "name": "cdn加速js引擎", "url": "https://cdnjs.com/" },
             { "name": "魔方简历", "url": "https://magicv.art/zh" }
         ],
-		"复习与笔记": [
+        "复习与笔记": [
             { "name": "Mysql复习笔记", "url": "https://jimhackking.github.io/%E8%BF%90%E7%BB%B4/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" },
             { "name": "算法复习笔记", "url": "https://labuladong.online/algo/" },
             { "name": "JUC并发编程，尚硅谷", "url": "https://www.cnblogs.com/qipaoxian/p/16860243.html" },
