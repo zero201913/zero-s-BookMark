@@ -22,9 +22,9 @@
             { "name": "博客设计参考网站", "url": "https://arthurw728.github.io/myblog/index.html#skills" },
             { "name": "网页网格生成器", "url": "https://cssgrid-generator.netlify.app/?ref=producthunt" },
             { "name": "配色表", "url": "http://www.peiseka.cn/" },
-            { "name": "在线代码编辑器", "url": "https://playcode.io/" }
-            { "name": "Figma设计网站", "url": "https://www.figma.com/" }
-            { "name": "Uiverse通用组件", "url": "https://uiverse.io/" }
+            { "name": "在线代码编辑器", "url": "https://playcode.io/" },
+            { "name": "Figma设计网站", "url": "https://www.figma.com/" },
+            { "name": "Uiverse通用组件", "url": "https://uiverse.io/" },
             { "name": "react设计后台", "url": "https://react-admin.cn/admin/" }
         ],
         "前后端参考文档":[
@@ -32,7 +32,7 @@
             {"name": "Vue Router", "url": "https://router.vuejs.org/zh/installation.html"},
             {"name": "Ant Design", "url": "https://ant.design/components/button-cn/"},
             {"name": "Bootstrap", "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"},
-            {"name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/installation/using-vite"},
+            {"name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/installation/using-vite"}
         ],
 		"学习与知识": [
             { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
