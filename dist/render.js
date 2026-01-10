@@ -3,6 +3,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search');
     const searchBtn = document.getElementById('search-btn');
     let activeCategory = 'all';
+    
+    // 主题切换逻辑
+    const themeToggle = document.querySelector('header h1');
+    const htmlElement = document.documentElement;
+    
+    // 加载保存的主题
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+    }
+    
+    // 主题切换事件监听
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        htmlElement.setAttribute('data-theme', newTheme);
+        
+        // 保存主题到本地存储
+        localStorage.setItem('theme', newTheme);
+    });
 
     // 分类切换
     document.querySelectorAll('.filter-btn').forEach(btn => {
