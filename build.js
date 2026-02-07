@@ -46,7 +46,7 @@ try {
     const categoryColors = {
         '开发与编程': '#4a6bff',
         '设计与前端': '#ff6b6b',
-        'AI与绘画': '#6bff9e',
+        'AI': '#6bff9e',
         '前后端参考文档': '#6bff9e',
         '文件与数据工具': '#ffb36b',
         '学习与知识': '#b36bff',

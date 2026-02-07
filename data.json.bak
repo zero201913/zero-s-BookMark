@@ -22,6 +22,7 @@
             { "name": "网页网格生成器", "url": "https://cssgrid-generator.netlify.app/?ref=producthunt" },
             { "name": "配色表", "url": "http://www.peiseka.cn/" },
             { "name": "在线代码编辑器", "url": "https://playcode.io/" },
+            { "name": "Figma设计网站", "url": "https://www.figma.com/" },
             { "name": "Uiverse通用组件", "url": "https://uiverse.io/" },
             { "name": "react设计后台", "url": "https://react-admin.cn/admin/" }
         ],
@@ -49,7 +50,6 @@
         ],
         "AI": [
             { "name": "Google Skills", "url": "https://www.skills.google/" },
-            { "name": "vibe AI编程", "url": "https://www.vibevibe.cn/" },
             { "name": "Ai绘画工程图", "url": "https://next-ai-drawio.jiang.jp/" },
             { "name": "鱼皮Ai导航", "url": "https://ai.codefather.cn/" },
             { "name": "AI图片无损放大", "url": "https://prompt.qpipi.com/" },
