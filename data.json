@@ -53,10 +53,13 @@
             { "name": "Ai绘画工程图", "url": "https://next-ai-drawio.jiang.jp/" },
             { "name": "鱼皮Ai导航", "url": "https://ai.codefather.cn/" },
             { "name": "AI图片无损放大", "url": "https://prompt.qpipi.com/" },
+	    { "name": "图片转提示词", "url": "https://image2prompts.com/zh-CN" },
             { "name": "AI动漫脚步图片生成", "url": "https://www.animefeet.online/zh" }
+
         ],
         "文件与数据工具": [
             { "name": "文叔叔传输平台", "url": "https://www.wenshushu.cn/" },
+            { "name": "超级文件快传", "url": "https://transfer.52python.cn/" },
             { "name": "picui图床", "url": "https://picui.cn/" },
             { "name": "在线计时器", "url": "https://cn.easycattimer.com/" },
             { "name": "云数据库平台", "url": "https://sqlpub.com/" },
