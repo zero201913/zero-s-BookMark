@@ -11,6 +11,7 @@
             { "name": "手搓项目教程", "url": "https://www.quanxiaoha.com/column/" },
             { "name": "代码小抄", "url": "https://www.codecopy.cn/user/my" },
             { "name": "力扣", "url": "https://leetcode.cn/" },
+            { "name": "力扣100top题解", "url": "https://kaai.dev/posts/leetcode-studyplan" },
             { "name": "Linux命令大全", "url": "https://www.linuxcool.com/" }
         ],
         "设计与前端": [
@@ -30,15 +31,16 @@
             { "name": "Vue Router", "url": "https://router.vuejs.org/zh/installation.html" },
             { "name": "Ant Design", "url": "https://ant.design/components/button-cn/" },
             { "name": "Bootstrap", "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/" },
-            { "name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/installation/using-vite" }
+            { "name": "Tailwind CSS", "url": "https://tailwindcss.com/docs/installation/using-vite" },
+            { "name": "Spring Initializer", "url": "https://start.spring.io/" }
         ],
         "学习与知识": [
+            { "name": "语雀笔记平台", "url": "https://www.yuque.com/dashboard/books" },
             { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
             { "name": "嘎嘎学嘎嘎地学", "url": "https://gaga.plus/" },
             { "name": "算法导航，交互式学习平台", "url": "https://algo.codefather.cn/" },
             { "name": "SQL闯关平台", "url": "https://sqlmother.yupi.icu/#/learn" },
             { "name": "面试鸭题库", "url": "https://www.mianshiya.com/" },
-            { "name": "学术研究平台", "url": "https://www.aminer.cn/" },
             { "name": "英语杂志阅读平台", "url": "https://englishnewsinlevels.com/" },
             { "name": "西瓜新概念英语", "url": "https://learnenai.com/" },
             { "name": "md思维导图工具", "url": "https://markmap.js.org/repl" },
@@ -48,12 +50,12 @@
             { "name": "英语实时新闻阅读", "url": "https://breakingnewsenglish.com/" }
         ],
         "AI": [
-            { "name": "Google Skills", "url": "https://www.skills.google/" },
+            { "name": "Claude AI Skills", "url": "https://skillsmp.com/zh" },
             { "name": "vibe AI编程", "url": "https://www.vibevibe.cn/" },
             { "name": "Ai绘画工程图", "url": "https://next-ai-drawio.jiang.jp/" },
             { "name": "鱼皮Ai导航", "url": "https://ai.codefather.cn/" },
             { "name": "AI图片无损放大", "url": "https://prompt.qpipi.com/" },
-	    { "name": "图片转提示词", "url": "https://image2prompts.com/zh-CN" },
+			{ "name": "图片转提示词", "url": "https://image2prompts.com/zh-CN" },
             { "name": "AI动漫脚步图片生成", "url": "https://www.animefeet.online/zh" }
 
         ],
@@ -64,9 +66,10 @@
             { "name": "在线计时器", "url": "https://cn.easycattimer.com/" },
             { "name": "云数据库平台", "url": "https://sqlpub.com/" },
             { "name": "压缩图片", "url": "https://freecompress.com/zh-cn/compress-image" },
-            { "name": "个人资源云盘", "url": "https://pan.uvooc.com/" },
+            { "name": "四六级友沃可云盘", "url": "https://pan.uvooc.com/" },
             { "name": "netcut网络剪贴板", "url": "https://netcut.cn/" },
-            { "name": "clipboard网络剪贴板", "url": "https://clipboard.im/" }
+            { "name": "clipboard网络剪贴板", "url": "https://clipboard.im/" },
+            { "name": "cmd在线markdown编辑器", "url": "https://www.zybuluo.com/cmd/" }
         ],
         "字体与文字": [
             { "name": "字体生成器", "url": "https://www.fontgenerator.dev/zh" },
@@ -104,10 +107,12 @@
             { "name": "2925无限邮箱", "url": "https://www.2925.com/login/" },
             { "name": "短视频解析工具", "url": "https://www.v2ob.com/" },
             { "name": "装机教程网站", "url": "https://zhuangit.ababtools.com/" },
-            { "name": "激活windows，office", "url": "https://kms.cx/" }
+            { "name": "激活windows，office", "url": "https://kms.cx/" },
+            { "name": "us.kg域名", "url": "https://dash.domain.digitalplat.org/" },
+            { "name": "spaceship域名", "url": "https://www.spaceship.com/" }
         ],
         "导航与整合页": [
-            { "name": "网址导航", "url": "https://www.ak47s.cn/" },
+            { "name": "ak47网址导航", "url": "https://www.ak47s.cn/" },
             { "name": "破解工具合集", "url": "https://www.quanxiaoha.com/dev-tools/" }
         ],
         "二次元与ACG": [
