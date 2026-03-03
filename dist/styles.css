@@ -308,3 +308,110 @@ footer {
 .category-社交与视频平台 { --category-color: #6bff6b; }
 .category-成人内容 { --category-color: #ff6b9e; }
 .category-个人娱乐 { --category-color: #6bffb3; }
+
+/* 切换按钮容器 */
+.toggle-buttons-container {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 3000;
+}
+
+/* 切换按钮 */
+.toggle-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* 额外内容展示页面 */
+.extra-page {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    transition: right 0.4s ease;
+    z-index: 2000;
+    overflow-y: auto;
+    padding: 60px 20px 20px;
+    box-sizing: border-box;
+}
+
+.extra-page.active {
+    right: 0;
+}
+
+/* 额外内容容器 */
+.extra-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 额外内容区块 */
+.extra-section {
+    margin-bottom: 40px;
+}
+
+.extra-section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, #667eea, #764ba2) 1;
+    color: var(--text-color);
+}
+
+/* 额外内容网格 */
+.extra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* 额外内容项 */
+.extra-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    word-break: break-word;
+}
+
+.extra-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.extra-item a {
+    color: white;
+    text-decoration: none;
+}

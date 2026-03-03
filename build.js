@@ -34,6 +34,19 @@ try {
         throw new Error('JSON 解析失败: ' + err.message + '\n请检查 data.json 语法（逗号、引号、括号）');
     }
 
+    // === 解析 av like 和 tag 数据 ===
+    let avLikeData = {};
+    let tagData = {};
+    try {
+        const parsed = JSON.parse(rawData);
+        avLikeData = parsed['av like'] || {};
+        tagData = parsed['tag'] || {};
+        console.log('av like 数据解析成功，数量:', Object.keys(avLikeData).length);
+        console.log('tag 数据解析成功，数量:', Object.keys(tagData).length);
+    } catch (err) {
+        console.warn('解析 av like 或 tag 数据失败:', err.message);
+    }
+
     // 3. 检查 index.html
     if (!fs.existsSync('index.html')) {
         throw new Error('index.html 不存在！');
@@ -117,10 +130,20 @@ try {
         console.log('创建 dist 目录');
     }
 
+    // === 嵌入 av like 和 tag 数据到页面 ===
+    const avLikeJson = JSON.stringify(avLikeData).replace(/"/g, '&quot;');
+    const tagJson = JSON.stringify(tagData).replace(/"/g, '&quot;');
+
     // 替换 script
-    const finalHtml = $.html().replace(
+    let finalHtml = $.html().replace(
         /<script\s+src="script\.js"><\/script>/,
         '<script src="render.js"></script>'
+    );
+
+    // 在 body 开始处添加数据容器
+    finalHtml = finalHtml.replace(
+        /<body>/,
+        `<body><div id="extra-data" data-av-like="${avLikeJson}" data-tag="${tagJson}"></div>`
     );
 
     fs.writeFileSync('dist/index.html', finalHtml);

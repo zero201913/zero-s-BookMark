@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div id="extra-data"></div>
+
+    <!-- 切换按钮容器 -->
+    <div class="toggle-buttons-container">
+        <button id="toggle-extra-btn" class="toggle-btn" title="查看更多">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button id="close-extra-btn" class="toggle-btn close-btn" title="返回" style="display: none;">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+
+    <!-- 额外内容展示页面 -->
+    <div id="extra-page" class="extra-page">
+        <div class="extra-content" id="extra-content">
+            <!-- av like 和 tag 内容由 render.js 动态生成 -->
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <h1><i class="fas fa-bookmark"></i>Zero02's BookMark</h1>

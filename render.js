@@ -122,4 +122,116 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始化
     filterBookmarks();
+
+    // === 额外内容页面切换逻辑 ===
+    const toggleExtraBtn = document.getElementById('toggle-extra-btn');
+    const closeExtraBtn = document.getElementById('close-extra-btn');
+    const extraPage = document.getElementById('extra-page');
+    const extraContent = document.getElementById('extra-content');
+    const extraDataContainer = document.getElementById('extra-data');
+
+    // 获取嵌入的数据
+    let avLikeData = {};
+    let tagData = {};
+
+    if (extraDataContainer) {
+        const avLikeJson = extraDataContainer.getAttribute('data-av-like');
+        const tagJson = extraDataContainer.getAttribute('data-tag');
+        try {
+            if (avLikeJson) {
+                avLikeData = JSON.parse(avLikeJson.replace(/&quot;/g, '"'));
+            }
+            if (tagJson) {
+                tagData = JSON.parse(tagJson.replace(/&quot;/g, '"'));
+            }
+        } catch (e) {
+            console.warn('解析额外数据失败:', e);
+        }
+    }
+
+    // 随机鲜艳颜色生成函数
+    function getRandomColor() {
+        const hue = Math.floor(Math.random() * 360);
+        return `hsl(${hue}, 85%, 60%)`;
+    }
+
+    // 生成额外内容
+    function renderExtraContent() {
+        let html = '';
+
+        // av like 部分
+        if (Object.keys(avLikeData).length > 0) {
+            html += '<div class="extra-section">';
+            html += '<h2 class="extra-section-title">AV Like</h2>';
+            html += '<div class="extra-grid">';
+            for (const [name, url] of Object.entries(avLikeData)) {
+                html += `
+                    <a href="${url}" target="_blank" rel="noopener" 
+                       class="extra-item" 
+                       style="background-color: ${getRandomColor()};">
+                        ${name}
+                    </a>
+                `;
+            }
+            html += '</div></div>';
+        }
+
+        // tag 部分
+        if (Object.keys(tagData).length > 0) {
+            html += '<div class="extra-section">';
+            html += '<h2 class="extra-section-title">Tag</h2>';
+            html += '<div class="extra-grid">';
+            for (const [name, prompt] of Object.entries(tagData)) {
+                html += `
+                    <div class="extra-item extra-item-copy" 
+                         style="background-color: ${getRandomColor()};"
+                         data-prompt="${prompt.replace(/"/g, '&quot;')}"
+                         title="点击复制提示词">
+                        ${name}
+                    </div>
+                `;
+            }
+            html += '</div></div>';
+        }
+
+        extraContent.innerHTML = html;
+
+        // 添加复制功能
+        document.querySelectorAll('.extra-item-copy').forEach(item => {
+            item.addEventListener('click', function() {
+                const prompt = this.getAttribute('data-prompt').replace(/&quot;/g, '"');
+                navigator.clipboard.writeText(prompt).then(() => {
+                    alert('提示词已复制到剪贴板！');
+                }).catch(err => {
+                    console.error('复制失败:', err);
+                });
+            });
+        });
+
+        // 滚动到额外页面的顶部
+        extraPage.scrollTop = 0;
+    }
+
+    // 打开额外页面
+    if (toggleExtraBtn) {
+        toggleExtraBtn.addEventListener('click', function() {
+            extraPage.classList.add('active');
+            toggleExtraBtn.style.display = 'none';
+            closeExtraBtn.style.display = 'flex';
+            renderExtraContent();
+            // 禁用主页面滚动
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // 关闭额外页面
+    if (closeExtraBtn) {
+        closeExtraBtn.addEventListener('click', function() {
+            extraPage.classList.remove('active');
+            closeExtraBtn.style.display = 'none';
+            toggleExtraBtn.style.display = 'flex';
+            // 恢复主页面滚动
+            document.body.style.overflow = '';
+        });
+    }
 });
