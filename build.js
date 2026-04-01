@@ -62,6 +62,8 @@ try {
         'AI': '#6bff9e',
         '前后端参考文档': '#6bff9e',
         '文件与数据工具': '#ffb36b',
+        '工具与数据': '#ffb36b',
+        '英语': '#6be1ff',
         '学习与知识': '#b36bff',
         '字体与文字': '#ff6bb3',
         '复习与笔记': '#ff6b6b',
@@ -150,12 +152,20 @@ try {
     fs.copyFileSync('styles.css', 'dist/styles.css');
     fs.copyFileSync('render.js', 'dist/render.js');
 
+    // 复制头像图片
+    if (fs.existsSync('avatar.jpg')) {
+        fs.copyFileSync('avatar.jpg', 'dist/avatar.jpg');
+    }
+
     console.log('构建成功！');
     console.log('输出目录: dist/');
     console.log('文件列表:');
     console.log('  - index.html');
     console.log('  - styles.css');
     console.log('  - render.js');
+    if (fs.existsSync('avatar.jpg')) {
+        console.log('  - avatar.jpg');
+    }
 
 } catch (error) {
     console.error('构建失败！');

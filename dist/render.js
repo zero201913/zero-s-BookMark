@@ -1,39 +1,71 @@
 // render.js - 交互逻辑
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('search');
     const searchBtn = document.getElementById('search-btn');
     let activeCategory = 'all';
-    
+
     // 主题切换逻辑
     const themeToggle = document.querySelector('header h1');
     const htmlElement = document.documentElement;
-    
+
     // 加载保存的主题
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         htmlElement.setAttribute('data-theme', savedTheme);
     }
-    
+
     // 主题切换事件监听
-    themeToggle.addEventListener('click', function() {
+    themeToggle.addEventListener('click', function () {
         const currentTheme = htmlElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         htmlElement.setAttribute('data-theme', newTheme);
-        
+
         // 保存主题到本地存储
         localStorage.setItem('theme', newTheme);
+
+        // 切换主题时更新背景
+        updateBackground();
     });
+
+    // 获取随机ACG背景图片
+    function updateBackground() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+
+        // 仅在非黑暗模式下设置背景
+        if (currentTheme !== 'dark') {
+            fetch('https://v2.xxapi.cn/api/randomAcgPic?type=pc&return=json', {
+                method: 'GET'
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.code === 200) {
+                        // 移除可能存在的反引号
+                        const imageUrl = data.data.replace(/`/g, '').trim();
+                        document.body.style.backgroundImage = `url(${imageUrl})`;
+                        document.body.style.backgroundSize = 'cover';
+                        document.body.style.backgroundPosition = 'center';
+                        document.body.style.backgroundAttachment = 'fixed';
+                    }
+                })
+                .catch(error => {
+                    console.error('获取背景图片失败:', error);
+                });
+        } else {
+            // 黑暗模式下移除背景
+            document.body.style.backgroundImage = '';
+        }
+    }
 
     // 分类切换
     document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             // 更新按钮状态
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            
+
             // 更新当前分类
             activeCategory = this.dataset.category;
-            
+
             // 执行过滤
             filterBookmarks();
         });
@@ -43,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function performSearch() {
         // 切换到 "全部" 分类
         activeCategory = 'all';
-        
+
         // 更新按钮 UI
         document.querySelectorAll('.filter-btn').forEach(b => {
             if (b.dataset.category === 'all') {
@@ -59,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 事件监听
     searchBtn.addEventListener('click', performSearch);
-    
+
     searchInput.addEventListener('keypress', e => {
         if (e.key === 'Enter') performSearch();
     });
@@ -73,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 核心过滤逻辑
     function filterBookmarks() {
         const query = searchInput.value.trim().toLowerCase();
-        
+
         // 如果之前的 searchBookmarks 留下了遗迹（#search-results），清理掉
         const oldSearchResults = document.getElementById('search-results');
         if (oldSearchResults) {
@@ -90,10 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
             section.querySelectorAll('.bookmark-card').forEach(card => {
                 const name = card.dataset.name || '';
                 const url = card.dataset.url || '';
-                
+
                 // 匹配搜索词
                 const matchesSearch = !query || name.includes(query) || url.includes(query);
-                
+
                 // 最终决定卡片是否显示：
                 // 1. 分类必须是激活的（或者选了“全部”）
                 // 2. 必须匹配搜索词
@@ -111,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // - 如果没有可见卡片，但在当前激活分类下且没有搜索词（空分类） -> 显示（或者隐藏，看需求，通常隐藏比较好）
             // - 这里的逻辑修正为：只要有 visible card 就显示，否则隐藏。
             //   这样搜索时，空的分类会自动隐藏。
-            
+
             if (hasVisibleCard) {
                 section.style.display = '';
             } else {
@@ -122,6 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始化
     filterBookmarks();
+
+    // 初始化背景
+    updateBackground();
 
     // === 额外内容页面切换逻辑 ===
     const toggleExtraBtn = document.getElementById('toggle-extra-btn');
@@ -198,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 添加复制功能
         document.querySelectorAll('.extra-item-copy').forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 const prompt = this.getAttribute('data-prompt').replace(/&quot;/g, '"');
                 navigator.clipboard.writeText(prompt).then(() => {
                     alert('提示词已复制到剪贴板！');
@@ -214,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 打开额外页面
     if (toggleExtraBtn) {
-        toggleExtraBtn.addEventListener('click', function() {
+        toggleExtraBtn.addEventListener('click', function () {
             extraPage.classList.add('active');
             toggleExtraBtn.style.display = 'none';
             closeExtraBtn.style.display = 'flex';
@@ -226,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 关闭额外页面
     if (closeExtraBtn) {
-        closeExtraBtn.addEventListener('click', function() {
+        closeExtraBtn.addEventListener('click', function () {
             extraPage.classList.remove('active');
             closeExtraBtn.style.display = 'none';
             toggleExtraBtn.style.display = 'flex';

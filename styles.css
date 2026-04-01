@@ -3,7 +3,7 @@
     --primary-color: #4a6bff;
     --secondary-color: #ff6b6b;
     --background-color: #f8f9fa;
-    --card-background: #ffffff;
+    --card-background: rgba(255, 255, 255, 0.9);
     --text-color: #333333;
     --border-radius: 10px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -15,7 +15,7 @@
     --primary-color: #6b8bff;
     --secondary-color: #ff8b8b;
     --background-color: #1a1a1a;
-    --card-background: #2d2d2d;
+    --card-background: rgba(45, 45, 45, 0.9);
     --text-color: #f0f0f0;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -105,11 +105,37 @@ header .container {
 
 header h1 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
 header h1 i {
     margin-right: 10px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+}
+
+.title-text {
+    user-select: none;
+}
+
+.title-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.title-avatar:hover {
+    transform: rotate(360deg);
 }
 
 .search-box {
@@ -169,21 +195,52 @@ header h1 i {
     border-radius: 20px;
     padding: 8px 16px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     font-weight: 500;
     color: #495057;
     box-shadow: 0 0 0 0 rgba(74, 107, 255, 0.4);
+    text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.8),
+        1px -1px 0 rgba(0, 0, 0, 0.8),
+        -1px 1px 0 rgba(0, 0, 0, 0.8),
+        1px 1px 0 rgba(0, 0, 0, 0.8);
 }
 
 .filter-btn:hover {
     background-color: #dee2e6;
-    box-shadow: 0 0 0 8px rgba(74, 107, 255, 0);
+    box-shadow: 0 0 30px rgba(74, 107, 255, 0.7), 0 0 60px rgba(74, 107, 255, 0.3), 0 0 0 8px rgba(74, 107, 255, 0);
+}
+
+/* 为不同颜色的按钮添加个性化悬停阴影 */
+.filter-btn[data-category="工具与数据"]:hover {
+    box-shadow: 0 0 20px rgba(255, 179, 107, 0.6), 0 0 40px rgba(255, 179, 107, 0.3), 0 0 0 8px rgba(255, 179, 107, 0);
+}
+
+.filter-btn[data-category="英语"]:hover {
+    box-shadow: 0 0 20px rgba(107, 225, 255, 0.6), 0 0 40px rgba(107, 225, 255, 0.3), 0 0 0 8px rgba(107, 225, 255, 0);
+}
+
+.filter-btn[data-category="开发与编程"]:hover {
+    box-shadow: 0 0 20px rgba(74, 107, 255, 0.6), 0 0 40px rgba(74, 107, 255, 0.3), 0 0 0 8px rgba(74, 107, 255, 0);
+}
+
+.filter-btn[data-category="设计与前端"]:hover {
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.6), 0 0 40px rgba(255, 107, 107, 0.3), 0 0 0 8px rgba(255, 107, 107, 0);
+}
+
+.filter-btn[data-category="AI"]:hover {
+    box-shadow: 0 0 20px rgba(107, 255, 158, 0.6), 0 0 40px rgba(107, 255, 158, 0.3), 0 0 0 8px rgba(107, 255, 158, 0);
 }
 
 .filter-btn.active {
     background-color: var(--primary-color);
     color: white;
     box-shadow: 0 0 0 4px rgba(74, 107, 255, 0.2);
+    text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.8),
+        1px -1px 0 rgba(0, 0, 0, 0.8),
+        -1px 1px 0 rgba(0, 0, 0, 0.8),
+        1px 1px 0 rgba(0, 0, 0, 0.8);
 }
 
 .filter-btn:active {
