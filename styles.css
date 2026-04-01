@@ -79,6 +79,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    padding-bottom: 80px;
 }
 
 .container {
@@ -125,6 +126,22 @@ header h1 i {
 
 .title-text {
     user-select: none;
+    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
 }
 
 .title-avatar {
@@ -316,7 +333,11 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 /* 响应式设计 */
