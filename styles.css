@@ -80,6 +80,43 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     padding-bottom: 80px;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* 黑暗主题下的滚动条 */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #333;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4a6bff 0%, #ff6b6b 100%);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff6b6b 0%, #4a6bff 100%);
+    box-shadow: 0 0 10px rgba(74, 107, 255, 0.5);
 }
 
 .container {
@@ -223,9 +260,28 @@ header h1 i {
         1px 1px 0 rgba(0, 0, 0, 0.8);
 }
 
+/* 为"全部"按钮添加全局颜色 */
+.filter-btn[data-category="all"] {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* 当其他分类被激活时，"全部"按钮变成白色 */
+.filter-btn:not(.active)[data-category="all"] {
+    background: white;
+    color: #495057;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .filter-btn:hover {
     background-color: #dee2e6;
     box-shadow: 0 0 30px rgba(74, 107, 255, 0.7), 0 0 60px rgba(74, 107, 255, 0.3), 0 0 0 8px rgba(74, 107, 255, 0);
+}
+
+/* 为"全部"按钮的悬停效果 */
+.filter-btn[data-category="all"]:hover {
+    background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.7), 0 0 60px rgba(102, 126, 234, 0.3);
 }
 
 /* 为不同颜色的按钮添加个性化悬停阴影 */
@@ -249,6 +305,7 @@ header h1 i {
     box-shadow: 0 0 20px rgba(107, 255, 158, 0.6), 0 0 40px rgba(107, 255, 158, 0.3), 0 0 0 8px rgba(107, 255, 158, 0);
 }
 
+/* 激活状态样式 */
 .filter-btn.active {
     background-color: var(--primary-color);
     color: white;
@@ -258,6 +315,12 @@ header h1 i {
         1px -1px 0 rgba(0, 0, 0, 0.8),
         -1px 1px 0 rgba(0, 0, 0, 0.8),
         1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* 为"全部"按钮的激活效果 */
+.filter-btn[data-category="all"].active {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.4);
 }
 
 .filter-btn:active {
