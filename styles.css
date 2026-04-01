@@ -285,8 +285,15 @@ footer {
 
 /* 动画效果 */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .bookmark-card {
@@ -294,20 +301,65 @@ footer {
 }
 
 /* 分类颜色 */
-.category-开发与编程 { --category-color: #4a6bff; }
-.category-设计与前端 { --category-color: #ff6b6b; }
-.category-AI与绘画 { --category-color: #6bff9e; }
-.category-文件与数据工具 { --category-color: #ffb36b; }
-.category-学习与知识 { --category-color: #b36bff; }
-.category-字体与文字 { --category-color: #ff6bb3; }
-.category-资源与素材 { --category-color: #6bffff; }
-.category-打字与输入 { --category-color: #ffff6b; }
-.category-工具与服务 { --category-color: #ff6b6b; }
-.category-导航与整合页 { --category-color: #6b6bff; }
-.category-二次元与ACG { --category-color: #ff9e6b; }
-.category-社交与视频平台 { --category-color: #6bff6b; }
-.category-成人内容 { --category-color: #ff6b9e; }
-.category-个人娱乐 { --category-color: #6bffb3; }
+.category-开发与编程 {
+    --category-color: #4a6bff;
+}
+
+.category-设计与前端 {
+    --category-color: #ff6b6b;
+}
+
+.category-AI {
+    --category-color: #6bff9e;
+}
+
+.category-工具与数据 {
+    --category-color: #ffb36b;
+}
+
+.category-英语 {
+    --category-color: #6be1ff;
+}
+
+.category-学习与知识 {
+    --category-color: #b36bff;
+}
+
+.category-字体与文字 {
+    --category-color: #ff6bb3;
+}
+
+.category-资源与素材 {
+    --category-color: #6bffff;
+}
+
+.category-打字与输入 {
+    --category-color: #ffff6b;
+}
+
+.category-工具与服务 {
+    --category-color: #ff6b6b;
+}
+
+.category-导航与整合页 {
+    --category-color: #6b6bff;
+}
+
+.category-二次元与ACG {
+    --category-color: #ff9e6b;
+}
+
+.category-社交与视频平台 {
+    --category-color: #6bff6b;
+}
+
+.category-成人内容 {
+    --category-color: #ff6b9e;
+}
+
+.category-个人娱乐 {
+    --category-color: #6bffb3;
+}
 
 /* 切换按钮容器 */
 .toggle-buttons-container {

@@ -118,6 +118,36 @@
                 "url": "https://start.spring.io/"
             }
         ],
+        "英语": [
+            {
+                "name": "英语杂志阅读平台",
+                "url": "https://englishnewsinlevels.com/"
+            },
+            {
+                "name": "西瓜新概念英语",
+                "url": "https://learnenai.com/"
+            },
+            {
+                "name": "英语学习平台",
+                "url": "https://www.englishgrammer.com/"
+            },
+            {
+                "name": "英语小说阅读网站",
+                "url": "https://www.yingyuxiaoshuo.com/"
+            },
+            {
+                "name": "英语实时新闻阅读",
+                "url": "https://breakingnewsenglish.com/"
+            },
+            {
+                "name": "英语六级真题",
+                "url": "https://pastpapers.cn/cet-6"
+            },
+            {
+                "name": "四六级友沃可云盘",
+                "url": "https://pan.uvooc.com/"
+            }
+        ],
         "学习与知识": [
             {
                 "name": "语雀笔记平台",
@@ -144,20 +174,8 @@
                 "url": "https://www.mianshiya.com/"
             },
             {
-                "name": "英语杂志阅读平台",
-                "url": "https://englishnewsinlevels.com/"
-            },
-            {
-                "name": "西瓜新概念英语",
-                "url": "https://learnenai.com/"
-            },
-            {
                 "name": "md思维导图工具",
                 "url": "https://markmap.js.org/repl"
-            },
-            {
-                "name": "英语小说阅读网站",
-                "url": "https://www.yingyuxiaoshuo.com/"
             },
             {
                 "name": "乡村郎中配药",
@@ -166,14 +184,6 @@
             {
                 "name": "闯关式git教程",
                 "url": "https://learngitbranching.js.org/"
-            },
-            {
-                "name": "英语实时新闻阅读",
-                "url": "https://breakingnewsenglish.com/"
-            },
-            {
-                "name": "英语六级真题",
-                "url": "https://pastpapers.cn/cet-6"
             }
         ],
         "AI": [
@@ -210,7 +220,19 @@
                 "url": "https://www.animefeet.online/zh"
             }
         ],
-        "文件与数据工具": [
+        "工具与数据": [
+            {
+                "name": "小小API",
+                "url": "https://xxapi.cn/"
+            },
+            {
+                "name": "UApiPro",
+                "url": "https://uapis.cn/"
+            },
+            {
+                "name": "PhotoPea",
+                "url": "https://demo.kodcloud.com/?plugin/photopea/"
+            },
             {
                 "name": "文叔叔传输平台",
                 "url": "https://www.wenshushu.cn/"
@@ -234,14 +256,6 @@
             {
                 "name": "压缩图片",
                 "url": "https://freecompress.com/zh-cn/compress-image"
-            },
-            {
-                "name": "四六级友沃可云盘",
-                "url": "https://pan.uvooc.com/"
-            },
-            {
-                "name": "netcut网络剪贴板",
-                "url": "https://netcut.cn/"
             },
             {
                 "name": "clipboard网络剪贴板",
