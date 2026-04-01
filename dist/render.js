@@ -36,7 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
             fetch('https://v2.xxapi.cn/api/randomAcgPic?type=pc&return=json', {
                 method: 'GET'
             })
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     if (data.code === 200) {
                         // 移除可能存在的反引号
@@ -49,6 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .catch(error => {
                     console.error('获取背景图片失败:', error);
+                    console.error('API接口调用失败，使用默认纯色背景');
+                    // 备用方案：使用纯色背景
+                    document.body.style.backgroundImage = '';
+                    document.body.style.backgroundColor = '#f8f9fa';
                 });
         } else {
             // 黑暗模式下移除背景
