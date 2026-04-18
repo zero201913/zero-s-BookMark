@@ -5,6 +5,10 @@
                 "name": "Apifox",
                 "url": "https://app.apifox.com/main"
             },
+			{
+                "name": "PlayCode在线编码",
+                "url": "https://playcode.io/"
+            },
             {
                 "name": "代码样式展示生成平台",
                 "url": "https://ray.so/"
@@ -52,8 +56,8 @@
         ],
         "设计与前端": [
             {
-                "name": "figma设计神器",
-                "url": "https://www.figma.com/"
+                "name": "ui-ux-pro",
+                "url": "https://ui-ux-pro-max-skill.nextlevelbuilder.io/"
             },
             {
                 "name": "快捷键备忘录",
@@ -208,8 +212,8 @@
                 "url": "https://ai.codefather.cn/"
             },
             {
-                "name": "AI图片无损放大",
-                "url": "https://prompt.qpipi.com/"
+                "name": "bigjpg无损放大",
+                "url": "https://bigjpg.com/tw"
             },
             {
                 "name": "图片转提示词",
@@ -220,7 +224,7 @@
                 "url": "https://www.animefeet.online/zh"
             }
         ],
-        "工具与数据": [
+        "便捷与数据": [
             {
                 "name": "小小API",
                 "url": "https://xxapi.cn/"
@@ -360,8 +364,21 @@
         ],
         "工具与服务": [
             {
-                "name": "虚拟手机号服务",
-                "url": "https://sms-activate.page/"
+                "name": "虚拟国际号服务",
+                "url": "https://5sim.net/zh"
+            },
+			{
+                "name": "DNS泄露检测",
+                "url": "https://dnsleaktest.com/"
+            },
+			{
+                "name": "菜鸟工具",
+                "url": "https://www.jyshare.com/"
+            },
+			
+			{
+                "name": "当前IP检测",
+                "url": "https://dnsleaktest.com/"
             },
             {
                 "name": "域名注册平台",
@@ -410,6 +427,10 @@
             {
                 "name": "二次元美图",
                 "url": "https://manyacg.top/"
+            },
+			{
+                "name": "chiikawa壁纸",
+                "url": "https://chiikawawallpaper.com/zh-Hant"
             },
             {
                 "name": "萌里壁纸",
@@ -480,6 +501,14 @@
             {
                 "name": "个人小游戏平台",
                 "url": "https://g8hh.github.io/#/"
+            },
+			{
+                "name": "桌游游戏平台",
+                "url": "https://game.hullqin.cn/"
+            },
+			{
+                "name": "复古游戏平台",
+                "url": "https://retrogamesnexus.com/zh"
             },
             {
                 "name": "碧蓝航线角色图鉴",

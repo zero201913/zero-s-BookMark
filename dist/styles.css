@@ -266,13 +266,6 @@ header h1 i {
     color: white;
 }
 
-/* 当其他分类被激活时，"全部"按钮变成白色 */
-.filter-btn:not(.active)[data-category="all"] {
-    background: white;
-    color: #495057;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 .filter-btn:hover {
     background-color: #dee2e6;
     box-shadow: 0 0 30px rgba(74, 107, 255, 0.7), 0 0 60px rgba(74, 107, 255, 0.3), 0 0 0 8px rgba(74, 107, 255, 0);
@@ -317,10 +310,10 @@ header h1 i {
         1px 1px 0 rgba(0, 0, 0, 0.8);
 }
 
-/* 为"全部"按钮的激活效果 */
+/* 为"全部"按钮的激活效果 - 增加外发光 */
 .filter-btn[data-category="all"].active {
     background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.6), 0 0 40px rgba(102, 126, 234, 0.4), 0 0 0 4px rgba(102, 126, 234, 0.3);
 }
 
 .filter-btn:active {
@@ -355,18 +348,35 @@ header h1 i {
 }
 
 .bookmark-card {
-    background-color: var(--card-background);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px) saturate(1.5);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 16px;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
 }
 
 .bookmark-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] .bookmark-card {
+    background-color: rgba(45, 45, 45, 0.65);
+    backdrop-filter: blur(16px) saturate(1.5);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .bookmark-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .bookmark-card::before {

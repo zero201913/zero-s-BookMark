@@ -55,34 +55,51 @@ try {
     const template = fs.readFileSync('index.html', 'utf8');
     const $ = cheerio.load(template);
 
-    // === 分类颜色映射 ===
-    const categoryColors = {
-        '开发与编程': '#4a6bff',
-        '设计与前端': '#ff6b6b',
-        'AI': '#6bff9e',
-        '前后端参考文档': '#6bff9e',
-        '文件与数据工具': '#ffb36b',
-        '工具与数据': '#ffb36b',
-        '英语': '#6be1ff',
-        '学习与知识': '#b36bff',
-        '字体与文字': '#ff6bb3',
-        '复习与笔记': '#ff6b6b',
-        '资源与素材': '#6bffff',
-        '打字与输入': '#ffff6b',
-        '工具与服务': '#ff6b6b',
-        '导航与整合页': '#6b6bff',
-        '二次元与ACG': '#ff9e6b',
-        '社交与视频平台': '#6bff6b',
-        '成人内容（需自律）': '#ff6b9e',
-        '个人娱乐': '#6bffb3'
-    };
+    // === 颜色生成器 - 使用 HSL 色相环自动分配颜色 ===
+    const usedColors = new Set();
+    
+    function stringToHash(str) {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        return Math.abs(hash);
+    }
+    
+    function hslToHex(h, s, l) {
+        s /= 100;
+        l /= 100;
+        const a = s * Math.min(l, 1 - l);
+        const f = n => {
+            const k = (n + h / 30) % 12;
+            const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+            return Math.round(255 * color).toString(16).padStart(2, '0');
+        };
+        return `#${f(0)}${f(8)}${f(4)}`;
+    }
+    
+    function getCategoryColor(category) {
+        const hash = stringToHash(category);
+        const hue = hash % 360;
+        const saturation = 70 + (hash % 20);
+        const lightness = 55 + (hash % 15);
+        let color = hslToHex(hue, saturation, lightness);
+        
+        if (usedColors.has(color)) {
+            const offset = (hash % 30) + 10;
+            color = hslToHex((hue + offset) % 360, saturation, lightness);
+        }
+        
+        usedColors.add(color);
+        return color;
+    }
 
     // === 生成分类按钮 ===
     const categoryFilter = $('.category-filter');
     categoryFilter.append(`<button class="filter-btn active" data-category="all">全部</button>`);
 
     Object.keys(bookmarksData).forEach(category => {
-        const color = categoryColors[category] || '#e9ecef';
+        const color = getCategoryColor(category);
         const btn = `
             <button class="filter-btn" data-category="${category}" 
                     style="background-color: ${color}; color: white;">
@@ -95,7 +112,7 @@ try {
     const container = $('#bookmarks-container');
 
     Object.keys(bookmarksData).forEach(category => {
-        const color = categoryColors[category] || '#4a6bff';
+        const color = getCategoryColor(category);
         let sectionHtml = `
             <div class="category-section" data-category="${category}">
                 <h2 class="category-title" style="color: ${color}; border-bottom-color: ${color};">
@@ -110,7 +127,7 @@ try {
                 return;
             }
             sectionHtml += `
-                <div class="bookmark-card" 
+                <div class="bookmark-card"
                      style="--category-color: ${color};"
                      data-name="${bookmark.name.toLowerCase()}"
                      data-url="${bookmark.url.toLowerCase()}"
